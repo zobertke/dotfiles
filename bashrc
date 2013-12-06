@@ -140,6 +140,8 @@ export SHORT_PATH='$(echo -n "${PWD/#$HOME/~}" | awk -F "/" '"'"'{if (length($0)
 
 export PS1="${BPurple}\h${NC} ${Cyan}"'$(getTime)'"${NC}${BRed}${PS1_versionControl}${NC} : ${White}"'$(eval "echo ${SHORT_PATH}")'"${NC}> "
 
+export EDITOR="/usr/bin/vim"
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
