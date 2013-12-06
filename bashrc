@@ -2,6 +2,38 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Normal Colors
+Black='\[\e[0;30m\]'        # Black
+Red='\[\e[0;31m\]'          # Red
+Green='\[\e[0;32m\]'        # Green
+Yellow='\[\e[0;33m\]'       # Yellow
+Blue='\[\e[0;34m\]'         # Blue
+Purple='\[\e[0;35m\]'       # Purple
+Cyan='\[\e[0;36m\]'         # Cyan
+White='\[\e[0;37m\]'        # White
+
+# Bold
+BBlack='\[\e[1;30m\]'       # Black
+BRed='\[\e[1;31m\]'         # Red
+BGreen='\[\e[1;32m\]'       # Green
+BYellow='\[\e[1;33m\]'      # Yellow
+BBlue='\[\e[1;34m\]'        # Blue
+BPurple='\[\e[1;35m\]'      # Purple
+BCyan='\[\e[1;36m\]'        # Cyan
+BWhite='\[\e[1;37m\]'       # White
+
+# Background
+On_Black='\[\e[40m\]'       # Black
+On_Red='\[\e[41m\]'         # Red
+On_Green='\[\e[42m\]'       # Green
+On_Yellow='\[\e[43m\]'      # Yellow
+On_Blue='\[\e[44m\]'        # Blue
+On_Purple='\[\e[45m\]'      # Purple
+On_Cyan='\[\e[46m\]'        # Cyan
+On_White='\[\e[47m\]'       # White
+
+NC="\[\e[m\]"               # Color Reset
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -88,6 +120,25 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 #update history in real time
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
+#STUFF for PS1
+versionControl="git"
+
+PS1_versionControl=""
+
+if [ "$versionControl" == "git" ]; then
+	PS1_versionControl='$(__git_ps1 " (%s)")'
+elif [ "$versionControl" == "clearcase"]; then
+	PS1_versionControl='TODO'
+fi
+
+alias en='setxkbmap -layout en_US'
+alias hun='setxkbmap -layout hu'
+alias getTime='date +"[%k:%M:%S"]'
+
+export SHORT_PATH='$(echo -n "${PWD/#$HOME/~}" | awk -F "/" '"'"'{if (length($0) > 14) { if (NF>4) print $1 "/" $2 "/.../" $(NF-1) "/" $NF; else if (NF>3) print $1 "/" $2 "/.../" $NF; else print $1 "/.../" $NF; } else print $0;}'"'"')'
+
+export PS1="${BPurple}\h${NC} ${Cyan}"'$(getTime)'"${NC}${BRed}${PS1_versionControl}${NC} : ${White}"'$(eval "echo ${SHORT_PATH}")'"${NC}> "
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
