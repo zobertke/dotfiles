@@ -123,13 +123,25 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 #STUFF for PS1
 versionControl="git"
+if [ "`hostname`" == "esekilxxen2631" ]; then
+	versionControl="clearcase"
+fi
+
+function getView() {
+	rawname=$(ct pwv -short)
+	if [ "$rawname" == '** NONE **' ]; then
+		echo "NONE"
+	else
+		echo "${rawname#${USER}_}"
+	fi
+}
 
 PS1_versionControl=""
 
 if [ "$versionControl" == "git" ]; then
 	PS1_versionControl='$(__git_ps1 " (%s)")'
-elif [ "$versionControl" == "clearcase"]; then
-	PS1_versionControl='TODO'
+elif [ "$versionControl" == "clearcase" ]; then
+	PS1_versionControl=" (`getView`)"
 fi
 
 alias en='setxkbmap -layout en_US'
