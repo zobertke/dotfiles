@@ -127,7 +127,7 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 #STUFF for PS1
 versionControl="git"
-if [ "`hostname`" == "esekilxxen2631" ]; then
+if [[ "`hostname`" =~ "esekilxxen????" ]]; then
 	versionControl="clearcase"
 fi
 
