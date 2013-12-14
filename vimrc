@@ -19,6 +19,7 @@ set nocompatible
 "map <C-n> :NERDTreeToggle<CR>
 map <Leader>n <plug>NERDTreeMirrorToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 1
+let NERDTreeIgnore = ['\.pyc$', '\.o$']
 
 "taglist
 let Tlist_Use_Right_Window = 1
