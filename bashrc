@@ -44,6 +44,7 @@ export LANGUAGE=en_US.UTF-8
 function extract() {
 	if [ -f $1 ] ; then
 		case $1 in
+			*.tar.lz) tar xvf $1 ;;
 			*.tar.bz2) tar xvjf $1 ;;
 			*.tar.gz) tar xvzf $1 ;;
 			*.bz2) bunzip2 $1 ;;
