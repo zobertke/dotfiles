@@ -199,6 +199,8 @@ export PS1="${BPurple}\h${NC} ${Cyan}"'$(getTime)'"${NC}${BRed}${PS1_versionCont
 
 export EDITOR="/usr/bin/vim"
 
+export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
