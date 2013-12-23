@@ -15,8 +15,7 @@ filetype plugin indent on
 
 set nocompatible
 
-"nerdtree
-"map <C-n> :NERDTreeToggle<CR>
+"NERDTree
 map <Leader>n <plug>NERDTreeMirrorToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 1
 let NERDTreeIgnore = ['\.pyc$', '\.o$']
@@ -25,7 +24,7 @@ let NERDTreeIgnore = ['\.pyc$', '\.o$']
 let Tlist_Use_Right_Window = 1
 map <Leader>tl :TlistToggle<CR>
 
-" YouCompleteMe Config
+"YouCompleteMe Config
 map gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_global_ycm_extra_conf = '/home/eandkuc/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
