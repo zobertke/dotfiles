@@ -74,5 +74,4 @@ set background=dark
 set backspace=indent,eol,start
 set laststatus=2
 colorscheme solarized
-colorscheme molokai
 
