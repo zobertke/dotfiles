@@ -2,16 +2,34 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 Helptags
 
+set nocompatible
+
 set nu
+
 set smartindent
 set tabstop=4
 set shiftwidth=4
+
 set hlsearch
 set incsearch
 
-filetype plugin indent on
+set backspace=indent,eol,start
 
-set nocompatible
+set history=1000
+set autoread
+set hidden
+
+set scrolloff=8
+set sidescrolloff=15
+set sidescroll=1
+
+if has('persistent_undo')
+	silent !mkdir ~/.vim/backups > /dev/null 2>&1
+	set undodir=~/.vim/backups
+	set undofile
+endif
+
+filetype plugin indent on
 
 "NERDTree
 map <Leader>n <plug>NERDTreeMirrorToggle<CR>
