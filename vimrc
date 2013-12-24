@@ -64,6 +64,9 @@ smap <C-K> <Plug>snipMateBack
 imap <C-L> <Plug>snipMateShow
 smap <C-L> <Plug>snipMateShow
 
+"vim-session
+let g:session_autosave = 'no'
+
 set t_Co=256
 let g:rehash256 = 1
 syntax on
