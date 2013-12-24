@@ -49,11 +49,20 @@ let g:clang_format#style_options = {
   \ "Standard" : "C++11",
   \ "BreakBeforeBraces" : "Attach"}
 
-"airline stuff
-let g:airline_powerline_fonts = 1
-
+"ClangFormat
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+
+"airline
+let g:airline_powerline_fonts = 1
+
+"SnipMate
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
+imap <C-K> <Plug>snipMateBack
+smap <C-K> <Plug>snipMateBack
+imap <C-L> <Plug>snipMateShow
+smap <C-L> <Plug>snipMateShow
 
 set t_Co=256
 let g:rehash256 = 1
