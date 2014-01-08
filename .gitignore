@@ -1,6 +1,7 @@
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
 *.un~
-vim/sessions/
+/vim/sessions/
+/vim/backups/
 .netrwhist
 *~
