@@ -188,9 +188,9 @@ function getView() {
 defaultSCM=$(getDefaultSCM)
 PS1_versionControl=""
 
-if [ "$versionControl" == "git" ]; then
+if [ "$defaultSCM" == "git" ]; then
 	PS1_versionControl='$(__git_ps1 " (%s)")'
-elif [ "$versionControl" == "clearcase" ]; then
+elif [ "$defaultSCM" == "clearcase" ]; then
 	PS1_versionControl=" (`getView`)"
 fi
 
