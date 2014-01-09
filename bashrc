@@ -167,10 +167,14 @@ function git-remove-submodule() {
 }
 
 #STUFF for PS1
-versionControl="git"
-if [[ "`hostname`" =~ "esekilxxen????" ]]; then
-	versionControl="clearcase"
-fi
+function getDefaultSCM() {
+	versionControl="git"
+	hostName=$(hostname)
+	if [ ${hostName#esekilxxen} != ${hostName} ]; then
+		versionControl="clearcase"
+	fi
+	echo ${versionControl}
+}
 
 function getView() {
 	rawname=$(ct pwv -short)
@@ -181,6 +185,8 @@ function getView() {
 	fi
 }
 
+defaultSCM=$(getDefaultSCM)
+echo $defaultSCM
 PS1_versionControl=""
 
 if [ "$versionControl" == "git" ]; then
