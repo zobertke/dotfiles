@@ -27,7 +27,7 @@
 	url = git@github.com:tomasr/molokai
 [submodule "vim/bundle/vim-operator-user"]
 	path = vim/bundle/vim-operator-user
-	url = git@github.com:kana/vim-operator-user
+	url = git@github.com:r0mai/vim-operator-user
 [submodule "vim/bundle/YouCompleteMe"]
 	path = vim/bundle/YouCompleteMe
 	url = git@github.com:Valloric/YouCompleteMe.git
