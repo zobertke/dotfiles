@@ -186,7 +186,6 @@ function getView() {
 }
 
 defaultSCM=$(getDefaultSCM)
-echo $defaultSCM
 PS1_versionControl=""
 
 if [ "$versionControl" == "git" ]; then
