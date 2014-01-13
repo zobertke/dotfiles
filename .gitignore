@@ -3,5 +3,6 @@
 *.un~
 /vim/sessions/
 /vim/backups/
+/vim/swp/
 .netrwhist
 *~

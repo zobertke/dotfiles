@@ -197,6 +197,9 @@ elif [ "$defaultSCM" == "clearcase" ]; then
 	PS1_versionControl=" (`getView`)"
 fi
 
+#swap file location for vim
+mkdir -p ~/.vim/swp
+
 alias en='setxkbmap -layout en_US'
 alias hun='setxkbmap -layout hu'
 alias getTime='date +"[%k:%M:%S"]'

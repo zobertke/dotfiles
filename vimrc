@@ -23,6 +23,8 @@ set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
 
+set directory=~/.vim/swp//
+
 if has('persistent_undo')
 	silent !mkdir ~/.vim/backups > /dev/null 2>&1
 	set undodir=~/.vim/backups
