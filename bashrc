@@ -199,7 +199,7 @@ PS1_versionControl=""
 if [ "$defaultSCM" == "git" ]; then
 	PS1_versionControl='$(__git_ps1 " (%s)")'
 elif [ "$defaultSCM" == "clearcase" ]; then
-	PS1_versionControl=" (`getView`)"
+	PS1_versionControl='$(__git_ps1 " (%s)")'" (`getView`)"
 fi
 
 #swap file location for vim
