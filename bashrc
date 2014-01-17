@@ -207,7 +207,7 @@ alias en='setxkbmap -layout en_US'
 alias hun='setxkbmap -layout hu'
 alias getTime='date +"[%k:%M:%S"]'
 
-export SHORT_PATH='$(echo -n "${PWD/#$HOME/~}" | awk -F "/" -f "${DOTFILES_REPO}/short_path.awk")'
+export SHORT_PATH='$(echo -n "${PWD/#$HOME/~}" | awk -f "${DOTFILES_REPO}/short_path.awk")'
 
 export PS1="${BPurple}\h${NC} ${Cyan}"'$(getTime)'"${NC}${BRed}${PS1_versionControl}${NC} : ${White}"'$(eval "echo ${SHORT_PATH}")'"${NC}> "
 
