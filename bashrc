@@ -34,6 +34,9 @@ On_White='\[\e[47m\]'       # White
 
 NC="\[\e[m\]"               # Color Reset
 
+#git repo location
+DOTFILES_REPO="$(dirname $(readlink -f ${BASH_SOURCE[0]}))"
+
 #apparently this is not obvious
 export SHELL="/bin/bash"
 
@@ -204,7 +207,7 @@ alias en='setxkbmap -layout en_US'
 alias hun='setxkbmap -layout hu'
 alias getTime='date +"[%k:%M:%S"]'
 
-export SHORT_PATH='$(echo -n "${PWD/#$HOME/~}" | awk -F "/" '"'"'{if (length($0) > 14) { if (NF>4) print $1 "/" $2 "/.../" $(NF-1) "/" $NF; else if (NF>3) print $1 "/" $2 "/.../" $NF; else print $1 "/.../" $NF; } else print $0;}'"'"')'
+export SHORT_PATH='$(echo -n "${PWD/#$HOME/~}" | awk -F "/" -f "${DOTFILES_REPO}/short_path.awk")'
 
 export PS1="${BPurple}\h${NC} ${Cyan}"'$(getTime)'"${NC}${BRed}${PS1_versionControl}${NC} : ${White}"'$(eval "echo ${SHORT_PATH}")'"${NC}> "
 
