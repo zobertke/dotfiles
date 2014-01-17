@@ -33,6 +33,12 @@ endif
 
 filetype plugin indent on
 
+"delimitMate
+let delimitMate_expand_cr = 0
+let delimitMate_jump_expansion = 2
+let delimitMate_jump_expansion = 1
+let delimitMate_balance_matchpairs = 1
+
 "NERDTree
 map <Leader>n <plug>NERDTreeMirrorToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 1
