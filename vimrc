@@ -97,7 +97,6 @@ set t_Co=256
 let g:rehash256 = 1
 syntax on
 set background=dark
-set backspace=indent,eol,start
 set laststatus=2
 colorscheme solarized
 
