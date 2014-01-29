@@ -211,7 +211,13 @@ alias getTime='date +"[%k:%M:%S"]'
 
 export SHORT_PATH='$(echo -n "${PWD/#$HOME/~}" | awk -f "${DOTFILES_REPO}/short_path.awk")'
 
-export PS1="${BPurple}\h${NC} ${Cyan}"'$(getTime)'"${NC}${BRed}${PS1_versionControl}${NC} : ${White}"'$(eval "echo ${SHORT_PATH}")'"${NC}> "
+PS1_Long="${BPurple}\h${NC} ${Cyan}"'$(getTime)'"${NC}${BRed}${PS1_versionControl}${NC} : ${BGreen}"'$(eval "echo ${SHORT_PATH}")'"${NC}> "
+PS1_Short="${BGreen}"'$(eval "echo ${SHORT_PATH}")'"${NC}> "
+if [ $(tput cols) -ge 120 ]; then
+	export PS1=${PS1_Long}
+else
+	export PS1=${PS1_Short}
+fi
 
 export EDITOR="/usr/bin/vim"
 
