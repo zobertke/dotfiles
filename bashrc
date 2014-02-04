@@ -175,6 +175,10 @@ function git-remove-submodule() {
 }
 
 #STUFF for PS1
+function getShortPath() {
+	echo -n "${PWD/#$HOME/~}" | awk -f "${DOTFILES_REPO}/short_path.awk"
+}
+
 function getDefaultSCM() {
 	versionControl="git"
 	hostName=$(hostname)
@@ -209,10 +213,8 @@ alias en='setxkbmap -layout en_US'
 alias hun='setxkbmap -layout hu'
 alias getTime='date +"[%k:%M:%S"]'
 
-export SHORT_PATH='$(echo -n "${PWD/#$HOME/~}" | awk -f "${DOTFILES_REPO}/short_path.awk")'
-
-PS1_Long="${Cyan}"'$(getTime)'" ${BPurple}\h${NC}${NC}${BRed}${PS1_versionControl}${NC} : ${BGreen}"'$(eval "echo ${SHORT_PATH}")'"${NC}\n${BRed}\$${NC} "
-PS1_Short="${BGreen}"'$(eval "echo ${SHORT_PATH}")'"${NC}\n${BRed}\$${NC} "
+PS1_Long="${Cyan}"'$(getTime)'" ${BPurple}\h${NC}${NC}${BRed}${PS1_versionControl}${NC} : ${BGreen}"'$(getShortPath)'"${NC}\n${BRed}\$${NC} "
+PS1_Short="${BGreen}"'$(getShortPath)'"${NC}\n${BRed}\$${NC} "
 if [ $(tput cols) -ge 50 ]; then
 	export PS1=${PS1_Long}
 else
