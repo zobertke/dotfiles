@@ -114,5 +114,5 @@ let g:rehash256 = 1
 syntax on
 set background=dark
 set laststatus=2
-colorscheme solarized
+colorscheme molokai
 
