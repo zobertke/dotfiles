@@ -1,0 +1,5 @@
+[include]
+	#This file can be used to configure user.email user.name etc.
+	path = ~/.gitconfig-personal
+[push]
+	default = simple
