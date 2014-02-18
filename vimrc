@@ -57,8 +57,13 @@ let delimitMate_balance_matchpairs = 1
 
 "NERDTree
 map <Leader>n <plug>NERDTreeMirrorToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup = 1
 let NERDTreeIgnore = ['\.pyc$', '\.o$']
+"Don't open NERDTree if vim is too narrow
+if &columns >= 150
+	let g:nerdtree_tabs_open_on_console_startup = 1
+else
+	let g:nerdtree_tabs_open_on_console_startup = 0
+endif
 
 "taglist
 let Tlist_Use_Right_Window = 1
