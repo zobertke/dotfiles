@@ -36,17 +36,17 @@ filetype plugin indent on
 "aliases for common command typos
 "(idea from http://blog.sanctum.geek.nz/vim-command-typos/)
 if has("user_commands")
-    command! -bang -nargs=? -complete=file W w<bang> <args>
-    command! -bang -nargs=? -complete=file Wq wq<bang> <args>
-    command! -bang -nargs=? -complete=file WQ wq<bang> <args>
-    command! -bang Wa wa<bang>
-    command! -bang WA wa<bang>
-    command! -bang Q q<bang>
-    command! -bang Qa qa<bang>
-    command! -bang QA qa<bang>
+	command! -bang -nargs=? -complete=file W w<bang> <args>
+	command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+	command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+	command! -bang Wa wa<bang>
+	command! -bang WA wa<bang>
+	command! -bang Q q<bang>
+	command! -bang Qa qa<bang>
+	command! -bang QA qa<bang>
 	"TODO X is reserved for encryption
-    command! -bang Xa xa<bang>
-    command! -bang XA xa<bang>
+	command! -bang Xa xa<bang>
+	command! -bang XA xa<bang>
 endif
 
 "delimitMate
