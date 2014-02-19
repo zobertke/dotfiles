@@ -61,9 +61,6 @@
 [submodule "vim/bundle/YankRing"]
 	path = vim/bundle/YankRing
 	url = git@github.com:r0mai/YankRing.vim.git
-[submodule "vim/bundle/vim-template"]
-	path = vim/bundle/vim-template
-	url = git@github.com:aperezdc/vim-template.git
 [submodule "vim/bundle/vim-better-whitespace"]
 	path = vim/bundle/vim-better-whitespace
 	url = git@github.com:ntpeters/vim-better-whitespace.git
