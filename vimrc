@@ -59,11 +59,7 @@ let delimitMate_balance_matchpairs = 1
 map <Leader>n <plug>NERDTreeMirrorToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.o$']
 "Don't open NERDTree if vim is too narrow
-if &columns >= 150
-	let g:nerdtree_tabs_open_on_console_startup = 1
-else
-	let g:nerdtree_tabs_open_on_console_startup = 0
-endif
+let g:nerdtree_tabs_open_on_console_startup = 1
 
 "taglist
 let Tlist_Use_Right_Window = 1
@@ -79,7 +75,6 @@ let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_semantic_triggers = {
   \ 'c' : ['->', '.'],
   \ 'cpp,objcpp' : ['->', '.', '::'],
-  \ 'objc' : ['->', '.'],
   \ 'perl' : ['->'],
   \ 'php' : ['->', '::'],
   \ 'cs,java,javascript,d,vim,ruby,python,perl6,scala,vb,elixir,go' : ['.'],
@@ -118,7 +113,15 @@ let g:session_autosave = 'no'
 set t_Co=256
 let g:rehash256 = 1
 syntax on
-set background=dark
 set laststatus=2
+
+set background=dark
 colorscheme molokai
 
+"If the console is narrow, then I'm probably on a projector => switch to light
+"colorscheme and don't start NERDTree
+if &columns < 150
+	let g:nerdtree_tabs_open_on_console_startup = 0
+	set background=light
+	colorscheme solarized
+endif
