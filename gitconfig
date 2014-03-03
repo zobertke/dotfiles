@@ -7,6 +7,8 @@
 	branches = branch -a
 	remotes = remote -v
 	ss = status
+[diff]
+	algorithm = patience
 [color]
 	ui = auto
 [push]
