@@ -193,9 +193,9 @@ function getDefaultSCM() {
 function getView() {
 	rawname=$(ct pwv -short)
 	if [ "$rawname" == '** NONE **' ]; then
-		echo "NONE"
+		echo ""
 	else
-		echo "${rawname#${USER}_}"
+		echo " (${rawname#${USER}_}) "
 	fi
 }
 
@@ -205,7 +205,7 @@ PS1_versionControl=""
 if [ "$defaultSCM" == "git" ]; then
 	PS1_versionControl='$(__git_ps1 " (%s)")'
 elif [ "$defaultSCM" == "clearcase" ]; then
-	PS1_versionControl='$(__git_ps1 " (%s)")'" (`getView`)"
+	PS1_versionControl='$(__git_ps1 " (%s)")'"${BRed}`getView`${NC}"
 fi
 
 #swap file location for vim
