@@ -49,6 +49,10 @@ if has("user_commands")
 	command! -bang XA xa<bang>
 endif
 
+"running tup upd
+command TupUpd execute "!tup upd"
+map <F5> :TupUpd<CR>
+
 "delimitMate
 let delimitMate_expand_cr = 0
 let delimitMate_jump_expansion = 2
