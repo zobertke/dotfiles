@@ -120,12 +120,11 @@ syntax on
 set laststatus=2
 
 set background=dark
-colorscheme molokai
+colorscheme solarized
 
 "If the console is narrow, then I'm probably on a projector => switch to light
 "colorscheme and don't start NERDTree
 if &columns < 150
 	let g:nerdtree_tabs_open_on_console_startup = 0
-	set background=light
-	colorscheme solarized
+	set background=dark
 endif
