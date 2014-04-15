@@ -229,6 +229,8 @@ alias en='setxkbmap -layout en_US'
 alias hun='setxkbmap -layout hu'
 alias getTime='date +"[%k:%M:%S"]'
 
+alias tmux="TERM=screen-256color-bce tmux"
+
 PS1_Long="${Cyan}"'$(getTime)'" ${BPurple}\h${NC}${NC}${BRed}${PS1_versionControl}${NC} : ${BGreen}"'$(getShortPath)'"${NC}\n${BRed}\$${NC} "
 PS1_Short="${BGreen}"'$(getShortPath)'"${NC}\n${BRed}\$${NC} "
 if [ $(tput cols) -ge 50 ]; then
