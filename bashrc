@@ -71,6 +71,20 @@ function extract() {
 	fi
 }
 
+
+function swap() {
+	if [ $# -ne 2 ]; then
+		echo "Two parameters expected" 1>&2
+		return 1
+	fi
+	local file1=$1
+	local file2=$2
+	local tmpfile=$(mktemp $(dirname "$file1")/XXXXXX)
+	mv "$file1" "$tmpfile"
+	mv "$file2" "$file1"
+	mv "$tmpfile" "$file2"
+}
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
