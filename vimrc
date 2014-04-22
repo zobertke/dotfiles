@@ -25,6 +25,8 @@ set sidescroll=1
 
 set directory=~/.vim/swp//
 
+set mouse=a
+
 if has('persistent_undo')
 	silent !mkdir ~/.vim/backups > /dev/null 2>&1
 	set undodir=~/.vim/backups
