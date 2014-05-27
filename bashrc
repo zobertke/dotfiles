@@ -242,6 +242,7 @@ fi
 export EDITOR="/usr/bin/vim"
 
 export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="/usr/local/lib64:${LD_LIBRARY_PATH}"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
