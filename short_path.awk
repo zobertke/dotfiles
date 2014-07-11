@@ -13,7 +13,7 @@ function printMiddlePart(start, end) {
 {
 	original=$0;
 	shortened=$0;
-	if (length($0) > 20 && NF > 3) {
+	if (length($0) > MAX_LENGTH && NF > 3) {
 		if (NF > 4) {
 			shortened=$1 "/" $2 printMiddlePart(3, NF-2) "/" $(NF-1) "/" $NF;
 		} else { #NF == 3

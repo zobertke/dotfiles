@@ -192,7 +192,9 @@ function git-remove-submodule() {
 
 #STUFF for PS1
 function getShortPath() {
-	echo -n "${PWD/#$HOME/~}" | awk -f "${DOTFILES_REPO}/short_path.awk"
+	offset=$1
+	let "path_length=$(tput cols) - $offset"
+	echo -n "${PWD/#$HOME/~}" | awk -v MAX_LENGTH=${path_length} -f "${DOTFILES_REPO}/short_path.awk"
 }
 
 function getDefaultSCM() {
@@ -231,9 +233,11 @@ alias getTime='date +"[%k:%M:%S"]'
 
 alias tmux="TERM=screen-256color-bce tmux"
 
-PS1_Long="${Cyan}"'$(getTime)'" ${BPurple}\h${NC}${NC}${BRed}${PS1_versionControl}${NC} : ${BGreen}"'$(getShortPath)'"${NC}\n${BRed}\$${NC} "
+short_ps1_threshold=50
+
+PS1_Long="${Cyan}"'$(getTime)'" ${BPurple}\h${NC}${NC}${BRed}${PS1_versionControl}${NC} : ${BGreen}"'$(getShortPath ${short_ps1_threshold})'"${NC}\n${BRed}\$${NC} "
 PS1_Short="${BGreen}"'$(getShortPath)'"${NC}\n${BRed}\$${NC} "
-if [ $(tput cols) -ge 50 ]; then
+if [ $(tput cols) -ge ${short_ps1_threshold} ]; then
 	export PS1=${PS1_Long}
 else
 	export PS1=${PS1_Short}
