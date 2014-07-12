@@ -27,6 +27,18 @@ set directory=~/.vim/swp//
 
 set mouse=a
 
+function! SetupEnvironment()
+	let l:path = expand('%:p')
+	if l:path =~ 'metashell'
+		setlocal expandtab smarttab textwidth=0
+		setlocal tabstop=2 shiftwidth=2
+	endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
+
+nnoremap <S-l> gt
+nnoremap <S-h> gT
+
 if has('persistent_undo')
 	silent !mkdir ~/.vim/backups > /dev/null 2>&1
 	set undodir=~/.vim/backups
@@ -122,6 +134,7 @@ syntax on
 set laststatus=2
 
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 
 "If the console is narrow, then I'm probably on a projector => switch to light
