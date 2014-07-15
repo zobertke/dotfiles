@@ -2,7 +2,7 @@
 	#This file can be used to configure user.email user.name etc.
 	path = ~/.gitconfig-personal
 [alias]
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit --decorate
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
