@@ -27,6 +27,9 @@ set directory=~/.vim/swp//
 
 set mouse=a
 
+set wildmode=longest,list,full
+set wildmenu
+
 function! SetupEnvironment()
 	let l:path = expand('%:p')
 	if l:path =~ 'metashell'
