@@ -195,7 +195,7 @@ function git-remove-submodule() {
 function getShortPath() {
 	offset=$1
 	let "path_length=$(tput cols) - $offset"
-	echo -n "${PWD/#$HOME/~}" | awk -v MAX_LENGTH=${path_length} -f "${DOTFILES_REPO}/short_path.awk"
+	echo -n $PWD | sed "s#^$HOME#~#g" | awk -v MAX_LENGTH=${path_length} -f "${DOTFILES_REPO}/short_path.awk"
 }
 
 function getDefaultSCM() {
