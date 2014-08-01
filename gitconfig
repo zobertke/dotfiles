@@ -9,6 +9,7 @@
 	ss = status
 	d = diff
 	dc = diff --cached
+	co = checkout
 [diff]
 	algorithm = patience
 [color]
