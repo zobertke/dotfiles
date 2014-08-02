@@ -10,6 +10,7 @@
 	d = diff
 	dc = diff --cached
 	co = checkout
+	cb = checkout -b
 [diff]
 	algorithm = patience
 [color]
