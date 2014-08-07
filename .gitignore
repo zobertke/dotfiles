@@ -4,5 +4,6 @@
 /vim/sessions/
 /vim/backups/
 /vim/swp/
+/vim/bundle/
 .netrwhist
 *~

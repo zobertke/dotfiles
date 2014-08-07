@@ -1,8 +1,38 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-Helptags
 
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'r0mai/taglist.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-fugitive'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'tomasr/molokai'
+Plugin 'r0mai/vim-operator-user'
+Plugin 'Valloric/YouCompleteMe.git'
+Plugin 'tomtom/tcomment_vim.git'
+Plugin 'vim-scripts/SearchComplete.git'
+Plugin 'tpope/vim-endwise.git'
+Plugin 'tomtom/tlib_vim.git'
+Plugin 'MarcWeber/vim-addon-mw-utils.git'
+Plugin 'garbas/vim-snipmate.git'
+Plugin 'honza/vim-snippets.git'
+Plugin 'xolox/vim-session.git'
+Plugin 'xolox/vim-misc.git'
+Plugin 'justinmk/vim-sneak.git'
+Plugin 'r0mai/YankRing.vim.git'
+Plugin 'ntpeters/vim-better-whitespace.git'
+Plugin 'bling/vim-airline.git'
+Plugin 'airblade/vim-gitgutter.git'
+Plugin 'wesQ3/vim-windowswap'
+
+call vundle#end()
+filetype plugin indent on
 
 set nu
 
@@ -47,8 +77,6 @@ if has('persistent_undo')
 	set undodir=~/.vim/backups
 	set undofile
 endif
-
-filetype plugin indent on
 
 "aliases for common command typos
 "(idea from http://blog.sanctum.geek.nz/vim-command-typos/)
