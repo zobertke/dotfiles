@@ -5,6 +5,8 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+let g:vundle_default_git_proto = 'git'
+
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'vim-scripts/taglist.vim'
