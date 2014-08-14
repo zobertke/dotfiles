@@ -36,6 +36,7 @@ Plugin 'ntpeters/vim-better-whitespace.git'
 Plugin 'bling/vim-airline.git'
 Plugin 'airblade/vim-gitgutter.git'
 Plugin 'wesQ3/vim-windowswap'
+Plugin 'vim-scripts/Rename'
 
 call vundle#end()
 filetype plugin indent on
