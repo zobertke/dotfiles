@@ -79,6 +79,10 @@ autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
 nnoremap <S-l> gt
 nnoremap <S-h> gT
 
+noremap <silent> <C-S> :wa<CR>
+vnoremap <silent> <C-S> <C-C>:wa<CR>
+inoremap <silent> <C-S> <C-O>:wa<CR>
+
 if has('persistent_undo')
 	silent !mkdir ~/.vim/backups > /dev/null 2>&1
 	set undodir=~/.vim/backups
