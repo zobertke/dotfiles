@@ -46,6 +46,7 @@ set nu
 set smartindent
 set tabstop=4
 set shiftwidth=4
+set colorcolumn=80
 
 set hlsearch
 set incsearch
@@ -108,6 +109,9 @@ endif
 "running tup upd
 command TupUpd execute "!tup upd"
 map <F5> :TupUpd<CR>
+
+command Bc execute "bufdo checktime"
+command BC execute "bufdo checktime"
 
 "delimitMate
 let delimitMate_expand_cr = 0
