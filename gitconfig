@@ -17,6 +17,7 @@
 	dc = diff --cached
 	co = checkout
 	cb = checkout -b
+	cp = cherry-pick
 
 	#list aliases
 	la = "!git config -l | grep alias | cut -c 7-"
