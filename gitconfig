@@ -3,7 +3,7 @@
 	path = ~/.gitconfig-personal
 [alias]
 	#log listing
-	l = log --pretty=oneline -n 20 --graph --abbrev-commit --decorate
+	l = log --pretty=oneline --graph --abbrev-commit --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --graph
 	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
