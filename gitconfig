@@ -16,7 +16,7 @@
 
 	#other
 	tags = tag -l
-	branches = branch -a
+	branches = branch -av
 	remotes = remote -v
 	ss = status
 	d = diff
