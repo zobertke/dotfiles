@@ -4,13 +4,19 @@
 [alias]
 	#log listing
 	l = log --pretty=oneline --graph --abbrev-commit --decorate
+	l1 = log -1 --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --graph
 	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
 
+	#stash
+	ssave = stash save
+	sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+	sapply = "!f() { git stash apply stash^{/$*}; }; f"
+
 	#other
 	tags = tag -l
-	branches = branch -a
+	branches = branch -av
 	remotes = remote -v
 	ss = status
 	d = diff

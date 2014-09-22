@@ -104,6 +104,8 @@ if has("user_commands")
 	"TODO X is reserved for encryption
 	command! -bang Xa xa<bang>
 	command! -bang XA xa<bang>
+	command! -nargs=? -complete=file Vn vert new <args>
+	command! -nargs=? -complete=file Te tabedit <args>
 endif
 
 "running tup upd
