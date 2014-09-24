@@ -181,7 +181,7 @@ set laststatus=2
 
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme molokai
 
 "If the console is narrow, then I'm probably on a projector =>
 "switch to light colorscheme
