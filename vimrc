@@ -124,8 +124,6 @@ let delimitMate_balance_matchpairs = 1
 "NERDTree
 map <Leader>n <plug>NERDTreeMirrorToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.o$']
-"Don't open NERDTree if vim is too narrow
-let g:nerdtree_tabs_open_on_console_startup = 1
 
 "taglist
 let Tlist_Use_Right_Window = 1
@@ -185,9 +183,8 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-"If the console is narrow, then I'm probably on a projector => switch to light
-"colorscheme and don't start NERDTree
+"If the console is narrow, then I'm probably on a projector =>
+"switch to light colorscheme
 if &columns < 150
-	let g:nerdtree_tabs_open_on_console_startup = 0
 	set background=dark
 endif
