@@ -177,6 +177,7 @@ let g:session_autosave = 'no'
 set t_Co=256
 let g:rehash256 = 1
 syntax on
+set synmaxcol=0
 set laststatus=2
 
 set background=dark
