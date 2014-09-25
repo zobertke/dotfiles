@@ -84,6 +84,8 @@ noremap <silent> <C-S> :wa<CR>
 vnoremap <silent> <C-S> <C-C>:wa<CR>
 inoremap <silent> <C-S> <C-O>:wa<CR>
 
+nnoremap <esc> :let @/ = ""<return><esc>
+
 if has('persistent_undo')
 	silent !mkdir ~/.vim/backups > /dev/null 2>&1
 	set undodir=~/.vim/backups
