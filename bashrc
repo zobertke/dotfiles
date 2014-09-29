@@ -201,7 +201,7 @@ function getShortPath() {
 function getDefaultSCM() {
 	versionControl="git"
 	hostName=$(hostname)
-	if [ ${hostName#esekilxxen} != ${hostName} ]; then
+	if [ ${hostName#esekilxxen} != ${hostName} ] && which ct; then
 		versionControl="clearcase"
 	fi
 	echo ${versionControl}
