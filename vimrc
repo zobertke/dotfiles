@@ -18,7 +18,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'tomasr/molokai'
+Plugin 'r0mai/molokai'
 Plugin 'kana/vim-operator-user'
 Plugin 'Valloric/YouCompleteMe.git'
 Plugin 'tomtom/tcomment_vim.git'
@@ -45,6 +45,7 @@ set nu
 
 set smartindent
 set tabstop=4
+set expandtab
 set shiftwidth=4
 set colorcolumn=80
 
