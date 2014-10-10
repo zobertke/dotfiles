@@ -37,6 +37,7 @@ Plugin 'bling/vim-airline.git'
 Plugin 'airblade/vim-gitgutter.git'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'vim-scripts/Rename'
+Plugin 'tpope/vim-sleuth'
 
 call vundle#end()
 filetype plugin indent on
