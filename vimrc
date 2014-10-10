@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 
 if !isdirectory(expand("~/.vim/bundle/Vundle.vim/.git"))
-	!git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  !git clone git@github.com:gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 endif
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -71,11 +71,11 @@ set wildmode=longest,list,full
 set wildmenu
 
 function! SetupEnvironment()
-	let l:path = expand('%:p')
-	if l:path =~ 'metashell'
-		setlocal expandtab smarttab textwidth=0
-		setlocal tabstop=2 shiftwidth=2
-	endif
+  let l:path = expand('%:p')
+  if l:path =~ 'metashell'
+    setlocal expandtab smarttab textwidth=0
+    setlocal tabstop=2 shiftwidth=2
+  endif
 endfunction
 autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
 
@@ -89,27 +89,27 @@ inoremap <silent> <C-S> <C-O>:wa<CR>
 nnoremap <Leader>/ :let @/ = ""<return>
 
 if has('persistent_undo')
-	silent !mkdir ~/.vim/backups > /dev/null 2>&1
-	set undodir=~/.vim/backups
-	set undofile
+  silent !mkdir ~/.vim/backups > /dev/null 2>&1
+  set undodir=~/.vim/backups
+  set undofile
 endif
 
 "aliases for common command typos
 "(idea from http://blog.sanctum.geek.nz/vim-command-typos/)
 if has("user_commands")
-	command! -bang -nargs=? -complete=file W w<bang> <args>
-	command! -bang -nargs=? -complete=file Wq wq<bang> <args>
-	command! -bang -nargs=? -complete=file WQ wq<bang> <args>
-	command! -bang Wa wa<bang>
-	command! -bang WA wa<bang>
-	command! -bang Q q<bang>
-	command! -bang Qa qa<bang>
-	command! -bang QA qa<bang>
-	"TODO X is reserved for encryption
-	command! -bang Xa xa<bang>
-	command! -bang XA xa<bang>
-	command! -nargs=? -complete=file Vn vert new <args>
-	command! -nargs=? -complete=file Te tabedit <args>
+  command! -bang -nargs=? -complete=file W w<bang> <args>
+  command! -bang -nargs=? -complete=file Wq wq<bang> <args>
+  command! -bang -nargs=? -complete=file WQ wq<bang> <args>
+  command! -bang Wa wa<bang>
+  command! -bang WA wa<bang>
+  command! -bang Q q<bang>
+  command! -bang Qa qa<bang>
+  command! -bang QA qa<bang>
+  "TODO X is reserved for encryption
+  command! -bang Xa xa<bang>
+  command! -bang XA xa<bang>
+  command! -nargs=? -complete=file Vn vert new <args>
+  command! -nargs=? -complete=file Te tabedit <args>
 endif
 
 "running tup upd
@@ -191,5 +191,5 @@ colorscheme molokai
 "If the console is narrow, then I'm probably on a projector =>
 "switch to light colorscheme
 if &columns < 150
-	set background=dark
+  set background=dark
 endif
