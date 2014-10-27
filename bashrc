@@ -34,6 +34,10 @@ On_White='\[\e[47m\]'       # White
 
 NC="\[\e[m\]"               # Color Reset
 
+if [ "$(uname)" == "Darwin" ]; then
+	alias readlink='greadlink'
+fi
+
 #git repo location
 DOTFILES_REPO="$(dirname $(readlink -f ${BASH_SOURCE[0]}))"
 
