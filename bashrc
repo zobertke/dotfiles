@@ -35,7 +35,7 @@ On_White='\[\e[47m\]'       # White
 NC="\[\e[m\]"               # Color Reset
 
 if [ "$(uname)" == "Darwin" ]; then
-	alias readlink='greadlink'
+    alias readlink='greadlink'
 fi
 
 #git repo location
@@ -52,41 +52,41 @@ export LANGUAGE=en_US.UTF-8
 [ -z "$PS1" ] && return
 
 function extract() {
-	if [ -f $1 ] ; then
-		case $1 in
-			*.tar.lz) tar xvf $1 ;;
-			*.tar.bz2) tar xvjf $1 ;;
-			*.tar.gz) tar xvzf $1 ;;
-			*.bz2) bunzip2 $1 ;;
-			*.rar) unrar x $1 ;;
-			*.gz) gunzip $1 ;;
-			*.tar) tar xvf $1 ;;
-			*.tbz2) tar xvjf $1 ;;
-			*.tgz) tar xvzf $1 ;;
-			*.zip) unzip $1 ;;
-			*.Z) uncompress $1 ;;
-			*.7z) 7z x $1 ;;
-			*) echo "'$1' cannot be extracted via >extract<"
-			   return 1 ;;
-		esac
-	else
-		echo "'$1' is not a valid file!"
-		return 1
-	fi
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.lz) tar xvf $1 ;;
+            *.tar.bz2) tar xvjf $1 ;;
+            *.tar.gz) tar xvzf $1 ;;
+            *.bz2) bunzip2 $1 ;;
+            *.rar) unrar x $1 ;;
+            *.gz) gunzip $1 ;;
+            *.tar) tar xvf $1 ;;
+            *.tbz2) tar xvjf $1 ;;
+            *.tgz) tar xvzf $1 ;;
+            *.zip) unzip $1 ;;
+            *.Z) uncompress $1 ;;
+            *.7z) 7z x $1 ;;
+            *) echo "'$1' cannot be extracted via >extract<"
+               return 1 ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+        return 1
+    fi
 }
 
 
 function swap() {
-	if [ $# -ne 2 ]; then
-		echo "Two parameters expected" 1>&2
-		return 1
-	fi
-	local file1=$1
-	local file2=$2
-	local tmpfile=$(mktemp $(dirname "$file1")/XXXXXX)
-	mv "$file1" "$tmpfile"
-	mv "$file2" "$file1"
-	mv "$tmpfile" "$file2"
+    if [ $# -ne 2 ]; then
+        echo "Two parameters expected" 1>&2
+        return 1
+    fi
+    local file1=$1
+    local file2=$2
+    local tmpfile=$(mktemp $(dirname "$file1")/XXXXXX)
+    mv "$file1" "$tmpfile"
+    mv "$file2" "$file1"
+    mv "$tmpfile" "$file2"
 }
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -107,7 +107,7 @@ shopt -s checkwinsize
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
 if [ ${BASH_VERSINFO} -ge "4" ]; then
-	shopt -s globstar
+    shopt -s globstar
 fi
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -115,12 +115,12 @@ fi
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-	debian_chroot=$(cat /etc/debian_chroot)
+    debian_chroot=$(cat /etc/debian_chroot)
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-	xterm-color) color_prompt=yes;;
+    xterm-color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -129,14 +129,14 @@ esac
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
-	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-	else
-	color_prompt=
-	fi
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
+    else
+    color_prompt=
+    fi
 fi
 
 unset color_prompt force_color_prompt
@@ -144,23 +144,23 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-	PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-	;;
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
 *)
-	;;
+    ;;
 esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-	alias ls='ls --color=auto'
-	#alias dir='dir --color=auto'
-	#alias vdir='vdir --color=auto'
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
 
-	alias grep='grep --color=auto'
-	alias fgrep='fgrep --color=auto'
-	alias egrep='egrep --color=auto'
-	alias less='less -R'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+    alias less='less -R'
 fi
 
 # some more ls aliases
@@ -178,55 +178,55 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
 #useful git helper (from https://gist.github.com/sharplet/6289697)
 function git-remove-submodule() {
-	submodule_name=$(echo "$1" | sed 's/\/$//'); shift
-	if git submodule status "$submodule_name" >/dev/null 2>&1; then
-		git submodule deinit -f "$submodule_name"
-		git rm -f "$submodule_name"
+    submodule_name=$(echo "$1" | sed 's/\/$//'); shift
+    if git submodule status "$submodule_name" >/dev/null 2>&1; then
+        git submodule deinit -f "$submodule_name"
+        git rm -f "$submodule_name"
 
-		git config -f .gitmodules --remove-section "submodule.$submodule_name"
-		if [ -z "$(cat .gitmodules)" ]; then
-			git rm -f .gitmodules
-		else
-			git add .gitmodules
-		fi
-	else
-		echo "Submodule '$submodule_name' not found" 1>&2
-		exit 1
-	fi
+        git config -f .gitmodules --remove-section "submodule.$submodule_name"
+        if [ -z "$(cat .gitmodules)" ]; then
+            git rm -f .gitmodules
+        else
+            git add .gitmodules
+        fi
+    else
+        echo "Submodule '$submodule_name' not found" 1>&2
+        exit 1
+    fi
 }
 
 #STUFF for PS1
 function getShortPath() {
-	offset=$1
-	let "path_length=$(tput cols) - $offset"
-	echo -n $PWD | sed "s#^$HOME#~#g" | awk -v MAX_LENGTH=${path_length} -f "${DOTFILES_REPO}/short_path.awk"
+    offset=$1
+    let "path_length=$(tput cols) - $offset"
+    echo -n $PWD | sed "s#^$HOME#~#g" | awk -v MAX_LENGTH=${path_length} -f "${DOTFILES_REPO}/short_path.awk"
 }
 
 function getDefaultSCM() {
-	versionControl="git"
-	hostName=$(hostname)
-	if [ ${hostName#esekilxxen} != ${hostName} ] && which ct > /dev/null 2>&1; then
-		versionControl="clearcase"
-	fi
-	echo ${versionControl}
+    versionControl="git"
+    hostName=$(hostname)
+    if [ ${hostName#esekilxxen} != ${hostName} ] && which ct > /dev/null 2>&1; then
+        versionControl="clearcase"
+    fi
+    echo ${versionControl}
 }
 
 function getView() {
-	rawname=$(ct pwv -short)
-	if [ "$rawname" == '** NONE **' ]; then
-		echo ""
-	else
-		echo " (${rawname#${USER}_}) "
-	fi
+    rawname=$(ct pwv -short)
+    if [ "$rawname" == '** NONE **' ]; then
+        echo ""
+    else
+        echo " (${rawname#${USER}_}) "
+    fi
 }
 
 defaultSCM=$(getDefaultSCM)
 PS1_versionControl=""
 
 if [ "$defaultSCM" == "git" ]; then
-	PS1_versionControl='$(__git_ps1 " (%s)")'
+    PS1_versionControl='$(__git_ps1 " (%s)")'
 elif [ "$defaultSCM" == "clearcase" ]; then
-	PS1_versionControl='$(__git_ps1 " (%s)")'"${BRed}`getView`${NC}"
+    PS1_versionControl='$(__git_ps1 " (%s)")'"${BRed}`getView`${NC}"
 fi
 
 #swap file location for vim
@@ -243,9 +243,9 @@ short_ps1_threshold=50
 PS1_Long="${Cyan}"'$(getTime)'" ${BPurple}\h${NC}${NC}${BRed}${PS1_versionControl}${NC} : ${BGreen}"'$(getShortPath ${short_ps1_threshold})'"${NC}\n${BRed}\$${NC} "
 PS1_Short="${BGreen}"'$(getShortPath)'"${NC}\n${BRed}\$${NC} "
 if [ $(tput cols) -ge ${short_ps1_threshold} ]; then
-	export PS1=${PS1_Long}
+    export PS1=${PS1_Long}
 else
-	export PS1=${PS1_Short}
+    export PS1=${PS1_Short}
 fi
 
 export EDITOR="/usr/bin/vim"
@@ -259,17 +259,17 @@ export LD_LIBRARY_PATH="/usr/local/lib64:${LD_LIBRARY_PATH}"
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
-	. ~/.bash_aliases
+    . ~/.bash_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-	. /etc/bash_completion
+    . /etc/bash_completion
 fi
 
 if [ -f ~/.bashrc_local ]; then
-	. ~/.bashrc_local
+    . ~/.bashrc_local
 fi
 
