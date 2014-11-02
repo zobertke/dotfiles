@@ -1,7 +1,3 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
 # Normal Colors
 Black='\[\e[0;30m\]'        # Black
 Red='\[\e[0;31m\]'          # Red
