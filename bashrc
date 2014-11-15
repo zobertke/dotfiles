@@ -210,7 +210,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 short_ps1_threshold=50
 
 PS1_Long="${Cyan}"'$(getTime)'" ${BPurple}\h${NC}${NC}${BRed}${PS1_versionControl}${NC} : ${BGreen}"'$(getShortPath ${short_ps1_threshold})'"${NC}\n${BRed}\$${NC} "
-PS1_Short="${BGreen}"'$(getShortPath)'"${NC}\n${BRed}\$${NC} "
+PS1_Short="${BGreen}"'$(getShortPath ${short_ps1_threshold})'"${NC}\n${BRed}\$${NC} "
 if [ $(tput cols) -ge ${short_ps1_threshold} ]; then
     export PS1=${PS1_Long}
 else
