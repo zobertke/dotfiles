@@ -189,6 +189,8 @@ function getView() {
     fi
 }
 
+source "${DOTFILES_REPO}/git-prompt.sh"
+
 defaultSCM=$(getDefaultSCM)
 PS1_versionControl=""
 
