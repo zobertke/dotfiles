@@ -32,6 +32,7 @@ NC="\[\e[m\]"               # Color Reset
 
 if [ "$(uname)" == "Darwin" ]; then
     alias readlink='greadlink'
+    alias vim='mvim -v'
 fi
 
 #git repo location
