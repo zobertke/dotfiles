@@ -33,6 +33,12 @@ NC="\[\e[m\]"               # Color Reset
 if [ "$(uname)" == "Darwin" ]; then
     alias readlink='greadlink'
     alias vim='mvim -v'
+    if [ -f `brew --prefix`/etc/bash_completion ]; then
+        . `brew --prefix`/etc/bash_completion
+    fi
+    if [ -f `brew --prefix`/etc/bash_completion.d ]; then
+        . `brew --prefix`/etc/bash_completion.d
+    fi
 fi
 
 #git repo location
