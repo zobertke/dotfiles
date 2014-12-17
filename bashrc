@@ -33,6 +33,7 @@ NC="\[\e[m\]"               # Color Reset
 if [ "$(uname)" == "Darwin" ]; then
     alias readlink='greadlink'
     alias vim='mvim -v'
+    export EDITOR='vim' #don't use /usr/bin/vim, so the alias above can be used
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
     fi
