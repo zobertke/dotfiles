@@ -30,10 +30,12 @@ On_White='\[\e[47m\]'       # White
 
 NC="\[\e[m\]"               # Color Reset
 
+export EDITOR="/usr/bin/vim"
+
 if [ "$(uname)" == "Darwin" ]; then
     alias readlink='greadlink'
     alias vim='mvim -v'
-    export EDITOR='vim' #don't use /usr/bin/vim, so the alias above can be used
+    export EDITOR='/usr/local/bin/mvim -v'
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
     fi
@@ -230,8 +232,6 @@ if [ $(tput cols) -ge ${short_ps1_threshold} ]; then
 else
     export PS1=${PS1_Short}
 fi
-
-export EDITOR="/usr/bin/vim"
 
 export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
 export LD_LIBRARY_PATH="/usr/local/lib64:${LD_LIBRARY_PATH}"
