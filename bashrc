@@ -30,9 +30,16 @@ On_White='\[\e[47m\]'       # White
 
 NC="\[\e[m\]"               # Color Reset
 
+function isOSX() {
+    if [ "$(uname)" == "Darwin" ]; then
+        return 0
+    fi
+    return 1
+}
+
 export EDITOR="/usr/bin/vim"
 
-if [ "$(uname)" == "Darwin" ]; then
+if isOSX; then
     alias readlink='greadlink'
     alias vim='mvim -v'
     export EDITOR='/usr/local/bin/mvim -v'
@@ -130,8 +137,8 @@ case "$TERM" in
 esac
 
 # enable color support of ls and also add handy aliases
-if [ "$(uname)" = "Darwin" ] || [ -x /usr/bin/dircolors ]; then
-    if [ "$(uname)" = "Darwin" ]; then
+if isOSX || [ -x /usr/bin/dircolors ]; then
+    if isOSX; then
         export CLICOLOR="YES"
     else
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
