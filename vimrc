@@ -38,6 +38,7 @@ Plugin 'airblade/vim-gitgutter.git'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'vim-scripts/Rename'
 Plugin 'tpope/vim-sleuth'
+Plugin 'rking/ag.vim'
 
 call vundle#end()
 filetype plugin indent on
