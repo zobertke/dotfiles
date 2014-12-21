@@ -102,6 +102,10 @@ function swap() {
     mv "$tmpfile" "$file2"
 }
 
+function mkcd() {
+    mkdir -p -- "$1" && cd -P -- "$1"
+}
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
