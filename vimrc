@@ -38,6 +38,7 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'vim-scripts/Rename'
 Plugin 'tpope/vim-sleuth'
 Plugin 'rking/ag.vim'
+Plugin 'sjl/gundo.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -87,6 +88,8 @@ vnoremap <silent> <C-S> <C-C>:wa<CR>
 inoremap <silent> <C-S> <C-O>:wa<CR>
 
 nnoremap <Leader>/ :let @/ = ""<return>
+
+nnoremap <F6> :GundoToggle<CR>
 
 if has('persistent_undo')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
