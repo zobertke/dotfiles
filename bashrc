@@ -171,25 +171,6 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 shopt -s histappend
 PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
-#useful git helper (from https://gist.github.com/sharplet/6289697)
-function git-remove-submodule() {
-    submodule_name=$(echo "$1" | sed 's/\/$//'); shift
-    if git submodule status "$submodule_name" >/dev/null 2>&1; then
-        git submodule deinit -f "$submodule_name"
-        git rm -f "$submodule_name"
-
-        git config -f .gitmodules --remove-section "submodule.$submodule_name"
-        if [ -z "$(cat .gitmodules)" ]; then
-            git rm -f .gitmodules
-        else
-            git add .gitmodules
-        fi
-    else
-        echo "Submodule '$submodule_name' not found" 1>&2
-        exit 1
-    fi
-}
-
 #STUFF for PS1
 function getShortPath() {
     offset=$1
