@@ -40,6 +40,7 @@ Plugin 'tpope/vim-sleuth'
 Plugin 'rking/ag.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'BufOnly.vim'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()
 filetype plugin indent on
