@@ -78,6 +78,9 @@ function! SetupEnvironment()
   if l:path =~ 'metashell'
     setlocal expandtab smarttab textwidth=0
     setlocal tabstop=2 shiftwidth=2
+  elseif l:path =~ 'prezi'
+    setlocal noexpandtab smarttab textwidth=0
+    setlocal tabstop=4 shiftwidth=4
   endif
 endfunction
 autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
