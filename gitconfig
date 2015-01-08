@@ -19,6 +19,7 @@
 	branches = branch -av
 	remotes = remote -v
 	ss = status
+    sss = status --short
 	d = diff
 	dc = diff --cached
 	co = checkout
