@@ -41,6 +41,7 @@ Plugin 'rking/ag.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'BufOnly.vim'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'tfnico/vim-gradle'
 
 call vundle#end()
 filetype plugin indent on
