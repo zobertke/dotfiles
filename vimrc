@@ -43,6 +43,7 @@ Plugin 'BufOnly.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tfnico/vim-gradle'
 Plugin 'vim-jp/cpp-vim'
+Plugin 'martong/vim-compiledb-path'
 
 call vundle#end()
 filetype plugin indent on
