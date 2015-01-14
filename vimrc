@@ -42,7 +42,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'BufOnly.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tfnico/vim-gradle'
-Bundle 'vim-jp/cpp-vim'
+Plugin 'vim-jp/cpp-vim'
 
 call vundle#end()
 filetype plugin indent on
