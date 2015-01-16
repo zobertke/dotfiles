@@ -76,6 +76,13 @@ set mouse=a
 set wildmode=longest,list,full
 set wildmenu
 
+set linebreak
+set breakindent
+set showbreak=↪
+set breakat-=-
+set breakat-=*
+set breakat+=()
+
 function! SetupEnvironment()
   let l:path = expand('%:p')
   if l:path =~ 'metashell'
