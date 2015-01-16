@@ -166,6 +166,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias g='git'
+# Completion for g (git)
+complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
