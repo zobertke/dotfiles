@@ -184,34 +184,9 @@ function getShortPath() {
     echo -n $PWD | sed "s#^$HOME#~#g" | awk -v MAX_LENGTH=${path_length} -f "${DOTFILES_REPO}/short_path.awk"
 }
 
-function getDefaultSCM() {
-    versionControl="git"
-    hostName=$(hostname)
-    if [ ${hostName#esekilxxen} != ${hostName} ] && which ct > /dev/null 2>&1; then
-        versionControl="clearcase"
-    fi
-    echo ${versionControl}
-}
-
-function getView() {
-    rawname=$(ct pwv -short)
-    if [ "$rawname" == '** NONE **' ]; then
-        echo ""
-    else
-        echo " (${rawname#${USER}_}) "
-    fi
-}
-
 source "${DOTFILES_REPO}/git-prompt.sh"
 
-defaultSCM=$(getDefaultSCM)
-PS1_versionControl=""
-
-if [ "$defaultSCM" == "git" ]; then
-    PS1_versionControl='$(__git_ps1 " (%s)")'
-elif [ "$defaultSCM" == "clearcase" ]; then
-    PS1_versionControl='$(__git_ps1 " (%s)")'"${BRed}`getView`${NC}"
-fi
+PS1_versionControl='$(__git_ps1 " (%s)")'
 
 #swap file location for vim
 mkdir -p ~/.vim/swp
