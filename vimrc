@@ -183,6 +183,9 @@ let g:clang_format#style_options = {
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 
+"vim-compiledb-path
+autocmd VimEnter CompileDbPathIfExists 'build/osx_x64_debug/make/compile_commands.json'
+
 "airline
 let g:airline_powerline_fonts = 1
 
