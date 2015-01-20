@@ -51,12 +51,16 @@ flags = [
 # 'flags' list of compilation flags. Notice that YCM itself uses that approach.
 
 # TODO detect this automatically
-compilation_database_folder = 'build/osx_x64_debug/make/'
+compilation_database_folders = [
+'build/osx_x64_debug/make/',
+'bin/'
+]
 
-if os.path.exists( compilation_database_folder ):
-  database = ycm_core.CompilationDatabase( compilation_database_folder )
-else:
-  database = None
+database = None
+for compilation_database_folder in compilation_database_folders:
+  if os.path.exists( compilation_database_folder ):
+    database = ycm_core.CompilationDatabase( compilation_database_folder )
+    break
 
 SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ]
 
