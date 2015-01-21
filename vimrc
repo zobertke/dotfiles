@@ -214,5 +214,5 @@ colorscheme molokai
 "If the console is narrow, then I'm probably on a projector =>
 "switch to light colorscheme
 if &columns < 150
-  set background=dark
+  set background=light
 endif
