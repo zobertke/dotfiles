@@ -44,6 +44,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'tfnico/vim-gradle'
 Plugin 'vim-jp/cpp-vim'
 Plugin 'martong/vim-compiledb-path'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -143,6 +144,17 @@ let delimitMate_expand_cr = 0
 let delimitMate_jump_expansion = 2
 let delimitMate_jump_expansion = 1
 let delimitMate_balance_matchpairs = 1
+
+"CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 "NERDTree
 map <Leader>n <plug>NERDTreeMirrorToggle<CR>
