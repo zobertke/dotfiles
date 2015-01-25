@@ -107,6 +107,10 @@ nnoremap <Leader>/ :let @/ = ""<return>
 
 nnoremap <F6> :GundoToggle<CR>
 
+"delete without yanking
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
 if has('persistent_undo')
   silent !mkdir ~/.vim/backups > /dev/null 2>&1
   set undodir=~/.vim/backups
