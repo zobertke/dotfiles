@@ -109,6 +109,9 @@ function swap() {
 function mkcd() {
     mkdir -p -- "$1" && cd -P -- "$1"
 }
+function repeat() {
+    printf "$1"'%.s' $(eval "echo {1.."$(($2))"}");
+}
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -162,6 +165,9 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+for i in {1..10}; do
+    alias "cd$(repeat . ${i})"="cd $(repeat ../ $((i-1)))"
+done
 
 alias g='git'
 # Completion for g (git)
