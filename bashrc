@@ -43,6 +43,7 @@ export EDITOR="/usr/bin/vim"
 if isOSX; then
     alias readlink='greadlink'
     alias vim='mvim -v'
+    alias vimdiff='mvim -v -d'
     export EDITOR='/usr/local/bin/mvim -v'
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
