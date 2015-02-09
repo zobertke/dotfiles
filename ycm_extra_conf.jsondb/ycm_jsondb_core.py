@@ -201,7 +201,9 @@ def FlagsForFile(filename, directory):
       compilation_info.compiler_working_dir_ )
 
     try:
-      final_flags.extend(ycm_jsondb_config.GetAdditionalFlags())
+      # final_flags.extend(ycm_jsondb_config.GetAdditionalFlags())
+      # prepend:
+      final_flags[:0] = ycm_jsondb_config.GetAdditionalFlags()
     except ValueError:
       pass
 

@@ -213,6 +213,7 @@ fi
 
 export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
 export LD_LIBRARY_PATH="/usr/local/lib64:${LD_LIBRARY_PATH}"
+export PYTHONPATH="${DOTFILES_REPO}/ycm_extra_conf.jsondb:${PYTHONPATH}"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
