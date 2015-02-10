@@ -109,6 +109,7 @@ function swap() {
 function mkcd() {
     mkdir -p -- "$1" && cd -P -- "$1"
 }
+
 function repeat() {
     printf "$1"'%.s' $(eval "echo {1.."$(($2))"}");
 }
