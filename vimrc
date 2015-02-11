@@ -45,6 +45,7 @@ Plugin 'tfnico/vim-gradle'
 Plugin 'vim-jp/cpp-vim'
 Plugin 'martong/vim-compiledb-path'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'jdonaldson/vaxe'
 
 call vundle#end()
 filetype plugin indent on
