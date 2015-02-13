@@ -20,6 +20,8 @@
 	remotes = remote -v
 	ss = status
     sss = status --short
+    a = add
+    c = commit
 	d = diff
 	dc = diff --cached
 	co = checkout
