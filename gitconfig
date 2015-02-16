@@ -27,6 +27,9 @@
 	co = checkout
 	cb = checkout -b
 	cp = cherry-pick
+    ps = push
+    pl = pull
+    f = fetch
 
 	#list aliases
 	la = "!git config -l | grep alias | cut -c 7-"
