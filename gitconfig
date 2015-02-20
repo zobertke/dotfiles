@@ -30,6 +30,7 @@
     ps = push
     pl = pull
     f = fetch
+    m = merge
 
 	#list aliases
 	la = "!git config -l | grep alias | cut -c 7-"
