@@ -133,8 +133,11 @@ if has("user_commands")
   command! -bang Xa xa<bang>
   command! -bang XA xa<bang>
   command! -nargs=? -complete=file Vn vert new <args>
+  command! -nargs=? -complete=file VN vert new <args>
   command! -nargs=? -complete=file Hn new <args>
+  command! -nargs=? -complete=file HN new <args>
   command! -nargs=? -complete=file Te tabedit <args>
+  command! -nargs=? -complete=file TE tabedit <args>
 endif
 
 "running tup upd
