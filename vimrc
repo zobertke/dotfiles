@@ -147,6 +147,10 @@ map <F5> :TupUpd<CR>
 command Bc execute "bufdo checktime"
 command BC execute "bufdo checktime"
 
+"duplicate current windows horizontally/vertically
+map dwh :Hn %<CR>
+map dwv :Vn %<CR>
+
 "delimitMate
 let delimitMate_expand_cr = 0
 let delimitMate_jump_expansion = 2
