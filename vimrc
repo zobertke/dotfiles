@@ -151,12 +151,6 @@ command BC execute "bufdo checktime"
 map dwh :Hn %<CR>
 map dwv :Vn %<CR>
 
-"delimitMate
-let delimitMate_expand_cr = 0
-let delimitMate_jump_expansion = 2
-let delimitMate_jump_expansion = 1
-let delimitMate_balance_matchpairs = 1
-
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
