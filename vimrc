@@ -25,8 +25,6 @@ Plugin 'vim-scripts/SearchComplete.git'
 Plugin 'tpope/vim-endwise.git'
 Plugin 'tomtom/tlib_vim.git'
 Plugin 'MarcWeber/vim-addon-mw-utils.git'
-Plugin 'garbas/vim-snipmate.git'
-Plugin 'honza/vim-snippets.git'
 Plugin 'xolox/vim-session.git'
 Plugin 'xolox/vim-misc.git'
 Plugin 'justinmk/vim-sneak.git'
@@ -208,14 +206,6 @@ autocmd VimEnter CompileDbPathIfExists 'build/osx_x64_debug/ninja/compile_comman
 
 "airline
 let g:airline_powerline_fonts = 1
-
-"SnipMate
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
-imap <C-K> <Plug>snipMateBack
-smap <C-K> <Plug>snipMateBack
-imap <C-L> <Plug>snipMateShow
-smap <C-L> <Plug>snipMateShow
 
 "vim-session
 let g:session_autosave = 'no'
