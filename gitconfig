@@ -21,6 +21,7 @@
 	ss = status
     sss = status --short
     a = add
+    b = branch
     c = commit
     cm = commit -m
 	d = diff
