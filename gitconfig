@@ -47,3 +47,6 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	pager = less -x1,5
+[advice]
+	pushNonFastForward = false
+    detachedHead = false
