@@ -24,6 +24,7 @@
     b = branch
     c = commit
     cm = commit -m
+    ca = commit --amend
 	d = diff
 	dc = diff --cached
 	co = checkout
