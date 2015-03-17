@@ -147,8 +147,8 @@ command Bc execute "bufdo checktime"
 command BC execute "bufdo checktime"
 
 "duplicate current windows horizontally/vertically
-map dwh :Hn %<CR>
-map dwv :Vn %<CR>
+map <leader>dwh :Hn %<CR>
+map <leader>dwv :Vn %<CR>
 
 "CtrlP
 let g:ctrlp_map = '<c-p>'
