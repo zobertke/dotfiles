@@ -150,6 +150,9 @@ command BC execute "bufdo checktime"
 map <leader>dwh :Hn %<CR>
 map <leader>dwv :Vn %<CR>
 
+"saving
+map <leader>s :wa<CR>
+
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
