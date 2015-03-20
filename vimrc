@@ -140,10 +140,6 @@ if has("user_commands")
   command! -nargs=? -complete=file TE tabedit <args>
 endif
 
-"running tup upd
-command TupUpd execute "!tup upd"
-map <F5> :TupUpd<CR>
-
 command Bc execute "bufdo checktime"
 command BC execute "bufdo checktime"
 
