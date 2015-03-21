@@ -21,6 +21,7 @@
 	s = status
     ss = status --short
     a = add
+    aA = add -A
     b = branch
     c = commit
     cm = commit -m
