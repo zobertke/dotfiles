@@ -18,8 +18,8 @@
 	tags = tag -l
 	branches = branch -av
 	remotes = remote -v
-	ss = status
-    sss = status --short
+	s = status
+    ss = status --short
     a = add
     b = branch
     c = commit
