@@ -170,6 +170,7 @@ for i in {1..10}; do
     alias "cd$(repeat . ${i})"="cd $(repeat ../ $((i-1)))"
 done
 
+alias v='vim'
 alias g='git'
 # Completion for g (git)
 complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
