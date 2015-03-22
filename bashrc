@@ -221,9 +221,6 @@ export LD_LIBRARY_PATH="/usr/local/lib:${LD_LIBRARY_PATH}"
 export LD_LIBRARY_PATH="/usr/local/lib64:${LD_LIBRARY_PATH}"
 export PYTHONPATH="${DOTFILES_REPO}/ycm_extra_conf.jsondb:${PYTHONPATH}"
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
