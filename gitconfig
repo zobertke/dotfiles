@@ -1,24 +1,24 @@
 [include]
-	#This file can be used to configure user.email user.name etc.
-	path = ~/.gitconfig-personal
+    #This file can be used to configure user.email user.name etc.
+    path = ~/.gitconfig-personal
 [alias]
-	#log listing
-	lll = log --pretty=oneline --graph --abbrev-commit --decorate
-	l1 = log -1 --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --graph
-	l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
+    #log listing
+    lll = log --pretty=oneline --graph --abbrev-commit --decorate
+    l1 = log -1 --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --graph
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
 
-	#stash
-	ssave = stash save
-	sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-	sapply = "!f() { git stash apply stash^{/$*}; }; f"
+    #stash
+    ssave = stash save
+    sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+    sapply = "!f() { git stash apply stash^{/$*}; }; f"
 
-	#other
-	tags = tag -l
-	branches = branch -av
-	remotes = remote -v
-	s = status
+    #other
+    tags = tag -l
+    branches = branch -av
+    remotes = remote -v
+    s = status
     ss = status --short
     a = add
     aA = add -A
@@ -26,29 +26,29 @@
     c = commit
     cm = commit -m
     ca = commit --amend
-	d = diff
-	dc = diff --cached
-	co = checkout
-	cb = checkout -b
-	cp = cherry-pick
+    d = diff
+    dc = diff --cached
+    co = checkout
+    cb = checkout -b
+    cp = cherry-pick
     ps = push
     pl = pull
     f = fetch
     m = merge
 
-	#list aliases
-	la = "!git config -l | grep alias | cut -c 7-"
+    #list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
 [merge]
-	conflictstyle = diff3
+    conflictstyle = diff3
 [diff]
-	algorithm = patience
+    algorithm = patience
 [color]
-	ui = auto
+    ui = auto
 [push]
-	default = simple
+    default = simple
 [core]
-	excludesfile = ~/.gitignore_global
-	pager = less -x1,5
+    excludesfile = ~/.gitignore_global
+    pager = less -x1,5
 [advice]
-	pushNonFastForward = false
+    pushNonFastForward = false
     detachedHead = false
