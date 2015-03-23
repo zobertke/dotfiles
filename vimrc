@@ -11,7 +11,7 @@ call vundle#begin()
 
 let g:vundle_default_git_proto = 'git'
 
-Plugin 'a.vim'
+Plugin 'nacitar/a.vim'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'scrooloose/nerdtree'
