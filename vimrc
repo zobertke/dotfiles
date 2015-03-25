@@ -218,6 +218,9 @@ syntax on
 set synmaxcol=0
 set laststatus=2
 
+set splitbelow
+set splitright
+
 set background=dark
 let g:solarized_termcolors=256
 colorscheme molokai
