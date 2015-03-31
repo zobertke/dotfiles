@@ -21,6 +21,7 @@
     s = status
     ss = status --short
     a = add
+    ap = add -p
     aA = add -A
     b = branch
     bd = branch -d
