@@ -38,6 +38,7 @@
     pl = pull
     f = fetch
     m = merge
+    rl = reflog
 
     #list aliases
     la = "!git config -l | grep alias | cut -c 7-"
