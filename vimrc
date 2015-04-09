@@ -150,6 +150,9 @@ map <leader>dwv :Vn %<CR>
 "saving
 map <leader>s :wa<CR>
 
+"quiting
+map <leader>q :q<CR>
+
 "CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
