@@ -39,6 +39,7 @@
     f = fetch
     m = merge
     rl = reflog
+    rH = reset HEAD
 
     #list aliases
     la = "!git config -l | grep alias | cut -c 7-"
