@@ -37,6 +37,7 @@
     ps = push
     pl = pull
     f = fetch
+    h = help
     m = merge
     rl = reflog
     rH = reset HEAD
