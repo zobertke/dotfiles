@@ -54,6 +54,7 @@ flags = [
 compilation_database_folders = [
 'build/osx_x64_debug/make/',
 'bin/'
+'build'
 ]
 
 database = None

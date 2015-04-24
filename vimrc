@@ -212,6 +212,7 @@ autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 autocmd VimEnter CompileDbPathIfExists 'build/osx_x64_debug/make/compile_commands.json'
 autocmd VimEnter CompileDbPathIfExists 'bin/compile_commands.json'
 autocmd VimEnter CompileDbPathIfExists 'build/osx_x64_debug/ninja/compile_commands.json'
+autocmd VimEnter CompileDbPathIfExists 'build/compile_commands.json'
 
 "airline
 let g:airline_powerline_fonts = 1
