@@ -59,6 +59,7 @@ set colorcolumn=81
 
 set hlsearch
 set incsearch
+set ignorecase
 
 set backspace=indent,eol,start
 
