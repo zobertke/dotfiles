@@ -134,6 +134,9 @@ if has("user_commands")
   command! -bang Q q<bang>
   command! -bang Qa qa<bang>
   command! -bang QA qa<bang>
+
+  command! -bang Tc tabclose<bang>
+  command! -bang TC tabclose<bang>
   "TODO X is reserved for encryption
   command! -bang Xa xa<bang>
   command! -bang XA xa<bang>
