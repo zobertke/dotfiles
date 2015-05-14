@@ -115,6 +115,17 @@ function repeat() {
     printf "$1"'%.s' $(eval "echo {1.."$(($2))"}");
 }
 
+#https://github.com/sschuberth/dev-scripts/blob/ccc9e3d6660b3275951c899ade981595e7efc789/android/pull_all.sh
+function adb_pull_all() {
+    if [ $# -ne 1 ]; then
+        echo "Rationale : Pull files from the device by wildcard."
+        echo "Usage     : $(basename $0) <path>"
+        exit 1
+    fi
+
+    adb shell ls $1 | tr -s "\r\n" "\0" | xargs -0 -n1 adb pull
+}
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
