@@ -158,6 +158,8 @@ map <leader>dwv :Vn %<CR>
 "saving
 map <leader>s :wa<CR>
 map <leader>w :wa<CR>
+map <leader>x :x<CR>
+map <leader>e :e<CR>
 
 "quiting
 map <leader>q :q<CR>
