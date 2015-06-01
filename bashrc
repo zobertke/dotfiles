@@ -126,6 +126,15 @@ function adb_pull_all() {
     adb shell ls $1 | tr -s "\r\n" "\0" | xargs -0 -n1 adb pull
 }
 
+function format_xml() {
+    if [ $# -ne 1 ]; then
+        echo "Usage: format_xml <xml>"
+        return 1
+    fi
+
+    xmllint --format "$1" > "$1.tmp" && mv "$1.tmp" "$1"
+}
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
