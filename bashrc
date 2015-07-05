@@ -135,6 +135,36 @@ function format_xml() {
     xmllint --format "$1" > "$1.tmp" && mv "$1.tmp" "$1"
 }
 
+# From https://gist.github.com/Rob--W/5888648
+function upto() {
+    if [ -z "$1" ]; then
+        echo "Usage: upto [directory]"
+        return
+    fi
+    local upto=$@
+    cd "${PWD/\/$upto\/*//$upto}"
+}
+# Auto-completion
+function _upto() {
+    local cur=${COMP_WORDS[COMP_CWORD]}
+    local d=${PWD//\//\ }
+    COMPREPLY=( $( compgen -W "$d" -- "$cur" ) )
+}
+complete -F _upto upto
+
+# Jump the first matching subdirectory
+function jd() {
+    if [ -z "$1" ]; then
+        echo "Usage: jd [directory]"
+        return 1
+    else
+        local restore_globstar=$(shopt -p globstar)
+        shopt -s globstar
+        cd **"/$@"
+        $restore_globstar
+    fi
+}
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
