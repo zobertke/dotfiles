@@ -158,10 +158,7 @@ function jd() {
         echo "Usage: jd [directory]"
         return 1
     else
-        local restore_globstar=$(shopt -p globstar)
-        shopt -s globstar
         cd **"/$@"
-        $restore_globstar
     fi
 }
 
