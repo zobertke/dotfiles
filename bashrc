@@ -274,3 +274,7 @@ if [ -f ~/.bashrc_local ]; then
     . ~/.bashrc_local
 fi
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+eval $(thefuck --alias)
+
